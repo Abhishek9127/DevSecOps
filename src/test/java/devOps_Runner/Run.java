@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="", glue={}, tags="")
+@CucumberOptions(features="src/test/java/devOps_features", glue={"devOps_stepdefination", "devOps_Helper"}, tags="@smoke")
 public class Run {
 
 
