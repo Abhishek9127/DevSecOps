@@ -10,7 +10,9 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 import com.github.dockerjava.api.model.Driver;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DevOps_Hooks extends DevOps_Base {
@@ -47,6 +49,16 @@ public class DevOps_Hooks extends DevOps_Base {
 
 		driver.get(prop.getProperty("URL"));
 		driver.manage().window().maximize();
+	}
+	
+	@After
+	public void teardown(Scenario s) {
+		if (s.isFailed()) {
+			Screenshot();
+		}
+		driver.quit();
+		System.out.println("Done");
+
 	}
 
 }
