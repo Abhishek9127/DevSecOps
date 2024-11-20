@@ -27,7 +27,8 @@ public class DevOps_Hooks extends DevOps_Base {
 			ChromeOptions option = new ChromeOptions();
 			option.addArguments("--incognito");
 			option.addArguments("--remote-allow-origins=*");
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(option);
+			
 
 		} else if (brows.equalsIgnoreCase("edge")) {
 
@@ -35,7 +36,7 @@ public class DevOps_Hooks extends DevOps_Base {
 			EdgeOptions option = new EdgeOptions();
 			option.addArguments("--incognito");
 			option.addArguments("--remote-allow-origins=*");
-			driver = new EdgeDriver();
+			driver = new EdgeDriver(option);
 		}
 
 		else if (brows.equalsIgnoreCase("firefox")) {
@@ -43,7 +44,7 @@ public class DevOps_Hooks extends DevOps_Base {
 			FirefoxOptions option = new FirefoxOptions();
 			option.addArguments("--incognito");
 			option.addArguments("--remote-allow-origins=*");
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(option);
 
 		}
 

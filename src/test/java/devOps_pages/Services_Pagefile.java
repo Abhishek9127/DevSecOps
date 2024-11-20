@@ -9,7 +9,7 @@ public class Services_Pagefile extends DevOps_Base {
 
 	public void click_on_the_services_icon() {
 
-		WebElement ser = driver.findElement(By.linkText("Services"));
+		WebElement ser = driver.findElement(By.linkText("//Services"));
 		ser.click();
 	}
 
@@ -17,6 +17,7 @@ public class Services_Pagefile extends DevOps_Base {
 		WebElement v = driver.findElement(By.xpath("//*[text()='Our Services']"));
 		String validate = v.getText();
 
+	
 		System.out.println(validate);
 	}
 	
