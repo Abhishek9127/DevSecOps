@@ -1,4 +1,4 @@
-@smoke
+@services
 Feature: Verify that functionality of services
 
 
