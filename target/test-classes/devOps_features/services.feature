@@ -1,6 +1,10 @@
-@services
+@test
 Feature: Verify that functionality of services
 
+Background:
+Given Click on the homepage login button
+When Enter the email and password
+And Click on login 
 
 Scenario: Verify that services are clickable or not
 
