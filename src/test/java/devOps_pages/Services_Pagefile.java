@@ -24,7 +24,7 @@ public class Services_Pagefile extends DevOps_Base {
 		WebElement v = driver.findElement(By.xpath("//*[text()='Our Services']"));
 
 		
-		String validate = v.getText();
+		
 
 		System.out.println(validate);
 
